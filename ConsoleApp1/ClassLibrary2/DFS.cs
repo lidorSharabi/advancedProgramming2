@@ -6,7 +6,7 @@ using System.Text;
 namespace SearchAlgorithmsLib
 {
     
-    class DFS : Searcher
+    public class DFS : Searcher
     {
         public override Solution search(ISearchable searchable)
         {

@@ -6,23 +6,23 @@ using Priority_Queue;
 
 namespace SearchAlgorithmsLib
 {
-    public abstract class Searcher : ISearchable
+    public abstract class Searcher<T> : ISearchable<T>
     {
-        private SimplePriorityQueue<State> openList;
+        private SimplePriorityQueue<State<T>> openList;
         private int evaluatedNodes;
 
         public Searcher()
         {
-            openList = new SimplePriorityQueue<State>();
+            openList = new SimplePriorityQueue<State<T>>();
             evaluatedNodes = 0;
         }
 
-        protected void addToOpenList(State state)
+        protected void addToOpenList(State<T> state)
         {
             openList.Enqueue(state, 1);
         }
 
-        protected State popOpenList()
+        protected State<T> popOpenList()
         {
             evaluatedNodes++;
             return openList.Dequeue();
@@ -38,6 +38,6 @@ namespace SearchAlgorithmsLib
             return evaluatedNodes;
         }
 
-        public abstract Solution search(ISearchable searchable);
+        public abstract Solution search(ISearchable<T> searchable);
     }
 }

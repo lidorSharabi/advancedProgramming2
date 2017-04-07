@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SearchAlgorithmsLib
 {
-    class Solution
+    public class Solution
     {
     }
 }

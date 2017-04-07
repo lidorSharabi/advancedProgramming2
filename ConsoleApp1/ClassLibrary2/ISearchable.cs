@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace SearchAlgorithmsLib
 {
-    interface ISearchable
+    public interface ISearchable<T>
     {
-        State getInitializeState();
-        State getGoalState();
-        List<State> getAllPossibleStates(State s);
+        State<T> getInitializeState();
+        State<T> getGoalState();
+        List<State<T>> getAllPossibleStates(State<T> s);
     }
 }
