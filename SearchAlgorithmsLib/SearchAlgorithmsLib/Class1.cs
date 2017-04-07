@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary2
+namespace SearchAlgorithmsLib
 {
-    class @try
+    public class Class1
     {
     }
 }
